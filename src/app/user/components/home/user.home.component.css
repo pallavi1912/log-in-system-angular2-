@@ -1,0 +1,12 @@
+h3{
+	margin: 0 auto;
+	color: #222f3a;
+}
+button{
+	background-color: #4CAF50;
+	padding: 7px 12px;
+	border-radius: 2px;
+	border:none;
+	color: #fff;
+	font-size: 15px;
+}

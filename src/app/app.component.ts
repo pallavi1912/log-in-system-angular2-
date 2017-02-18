@@ -15,7 +15,7 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Please Log In to continue.';
+  title = 'LogIn System';
   
   /**
    * Constructor of our main component

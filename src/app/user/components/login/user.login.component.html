@@ -1,1 +1,23 @@
-<h1>Login page</h1>
+<div class="container shadow">
+	<h3 class="text-center">Login page</h3>
+<form (ngSubmit)="doLogin()" #loginForm="ngForm">
+<div class="text-center margin-top">
+    <label for="username width-20">Email</label>
+  <input class="form-control width-30" id="username" type="email" placeholder="Email Address" name="username" [(ngModel)]="loginData.email"
+    #loginName="ngModel" required>
+
+</div>
+<div class="text-center margin-top">
+<label for="password width-20">Password</label>
+    <input class="form-control width-30" id="password" type="password" placeholder="Enter Password" name="password" [(ngModel)]="loginData.password"
+    #loginPassword="ngModel" required>
+</div>  
+<div class="text-center margin-top">
+    <button class="btn btn-success login" type="submit">Login <i class="fa fa-fw fa-unlock-alt"></i></button>
+</div>
+ 
+  
+</form>
+</div>
+
+
