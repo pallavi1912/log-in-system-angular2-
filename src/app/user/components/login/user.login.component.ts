@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ToasterService } from '../../../shared/toaster.service';
-
+// import { ToasterService } from '../../../shared/toaster.service';
+import {UserBasicService} from '../../services/user.service';
 @Component({
   selector: 'app-user',
   templateUrl: './user.login.component.html',
@@ -12,12 +12,12 @@ export class UserLoginComponent implements OnInit {
   
 
   loginData = {
-    email: '',
-    password: ''
+    email: 'admin@gmail.com',
+    password: 'admin'
   };
   
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private userService: UserBasicService) {
       }
 
   ngOnInit() {
@@ -26,5 +26,13 @@ export class UserLoginComponent implements OnInit {
 
 
   doLogin() {
+    let res = this.userService.login(this.loginData.email, this.loginData.password);
+    console.log('here',res);
+    if(res) {
+      console.log('here');
+      this.router.navigateByUrl('/home');
+    } else {
+      // show login error
+    }
   }
 }

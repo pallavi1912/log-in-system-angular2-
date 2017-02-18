@@ -1,1 +1,10 @@
 <h1>Login page</h1>
+<form (ngSubmit)="doLogin()" #loginForm="ngForm">
+  <input class="form-control" id="username" type="email" placeholder="Email Address" name="username" [(ngModel)]="loginData.email"
+    #loginName="ngModel" required>
+  <label for="username">Email</label>
+  <input class="form-control" id="password" type="password" placeholder="Enter Password" name="password" [(ngModel)]="loginData.password"
+    #loginPassword="ngModel" required>
+  <label for="password">Password</label>
+  <button class="btn btn-primary" type="submit">Login <i class="fa fa-fw fa-unlock-alt"></i></button>
+</form>

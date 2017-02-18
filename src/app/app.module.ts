@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { routes } from './app-routing.module';
 
-import { ReactiveFormsModule } from '@angular/forms';
+// import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent }        from './app.component';
 
 import { UserModule } from './user/user.module';
@@ -18,8 +18,10 @@ import { UserModule } from './user/user.module';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpModule
+    // ReactiveFormsModule,
+    HttpModule,
+    RouterModule.forRoot(routes,{useHash:true}),
+    UserModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
